@@ -22,4 +22,14 @@ export type GgmPost = {
 
 export type GgmPostWithAuthor = GgmPost & {
   ggm_profiles: { nickname: string } | null;
+  ggm_post_likes: { count: number }[];
+};
+
+export type GgmComment = {
+  id: string;
+  post_id: string;
+  user_id: string;
+  content: string;
+  created_at: string;
+  ggm_profiles: { nickname: string } | null;
 };

@@ -33,6 +33,9 @@ export default async function Header() {
             <Link href="/posts/new" className="ggm-btn ggm-btn-primary">
               글쓰기
             </Link>
+            <Link href="/wishlist" className="ggm-btn ggm-btn-ghost">
+              찜한 상품
+            </Link>
             <span className="ggm-nickname">
               {nickname ?? user.email} 님
             </span>
