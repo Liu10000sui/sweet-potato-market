@@ -104,6 +104,12 @@ export default async function Home() {
         </div>
       </section>
 
+      <section className="ggm-market-cta">
+        <Link href="/posts" className="ggm-btn ggm-btn-primary ggm-btn-lg">
+          🍠 장터로 가기
+        </Link>
+      </section>
+
       <section className="ggm-features">
         {FEATURES.map((f) => (
           <div key={f.title} className="ggm-feature-card">

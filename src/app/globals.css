@@ -323,6 +323,13 @@ body {
   flex-wrap: wrap;
 }
 
+.ggm-market-cta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
 /* ---------- Feature cards ---------- */
 
 .ggm-features {
