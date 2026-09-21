@@ -437,7 +437,9 @@ body {
   margin-top: 0;
 }
 
-.ggm-form input {
+.ggm-form input,
+.ggm-form textarea,
+.ggm-form select {
   font-family: var(--font-retro), monospace;
   font-size: 1.15rem;
   background: #0b1330;
@@ -446,11 +448,28 @@ body {
   padding: 0.55rem 0.75rem;
   color: var(--ggm-ink);
   outline: none;
+  resize: vertical;
 }
 
-.ggm-form input:focus {
+.ggm-form input:focus,
+.ggm-form textarea:focus,
+.ggm-form select:focus {
   border-color: var(--ggm-cyan);
   box-shadow: 0 0 0 2px rgba(127, 219, 255, 0.25);
+}
+
+.ggm-card-wide {
+  max-width: 560px;
+}
+
+.ggm-btn-danger {
+  background: transparent;
+  color: var(--ggm-pink);
+  box-shadow: inset 0 0 0 2px var(--ggm-pink);
+}
+
+.ggm-btn-danger:hover {
+  background: rgba(255, 111, 207, 0.15);
 }
 
 .ggm-switch {
@@ -463,4 +482,162 @@ body {
 .ggm-switch a {
   color: var(--ggm-green);
   text-decoration: underline;
+}
+
+/* ---------- Posts (장터) ---------- */
+
+.ggm-posts-main {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.ggm-posts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ggm-page-title {
+  font-family: var(--font-pixel), monospace;
+  font-size: 1.2rem;
+  color: var(--ggm-orange);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.ggm-empty {
+  color: var(--ggm-ink-dim);
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1.15rem;
+}
+
+.ggm-post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .ggm-post-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .ggm-post-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ggm-post-card {
+  display: block;
+  background: var(--ggm-card-bg);
+  border: 3px solid var(--ggm-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: var(--ggm-ink);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.08s ease;
+}
+
+.ggm-post-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--ggm-cyan);
+}
+
+.ggm-post-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.ggm-badge {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.ggm-badge-selling {
+  background: rgba(88, 224, 110, 0.18);
+  color: var(--ggm-green);
+}
+
+.ggm-badge-reserved {
+  background: rgba(255, 182, 39, 0.18);
+  color: var(--ggm-orange);
+}
+
+.ggm-badge-sold {
+  background: rgba(169, 196, 232, 0.15);
+  color: var(--ggm-ink-dim);
+}
+
+.ggm-post-price {
+  font-family: var(--font-pixel), monospace;
+  font-size: 0.85rem;
+  color: var(--ggm-cyan);
+}
+
+.ggm-post-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.ggm-post-card-desc {
+  color: var(--ggm-ink-dim);
+  font-size: 1rem;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0.75rem;
+}
+
+.ggm-post-card-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--ggm-ink-dim);
+  font-size: 0.9rem;
+}
+
+.ggm-post-detail {
+  position: relative;
+  z-index: 1;
+  background: var(--ggm-card-bg);
+  border: 3px solid var(--ggm-border);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.35);
+}
+
+.ggm-post-detail-title {
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.ggm-post-detail-desc {
+  color: var(--ggm-ink);
+  line-height: 1.7;
+  font-size: 1.15rem;
+  white-space: pre-wrap;
+  margin: 1.5rem 0 2rem;
+  border-top: 2px solid var(--ggm-border);
+  padding-top: 1.5rem;
+}
+
+.ggm-post-detail-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }

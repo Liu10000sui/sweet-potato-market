@@ -25,8 +25,14 @@ export default async function Header() {
         <span className="ggm-logo-emoji">🍠</span> 고구마마켓
       </Link>
       <nav className="ggm-nav">
+        <Link href="/posts" className="ggm-btn ggm-btn-ghost">
+          장터
+        </Link>
         {user ? (
           <>
+            <Link href="/posts/new" className="ggm-btn ggm-btn-primary">
+              글쓰기
+            </Link>
             <span className="ggm-nickname">
               {nickname ?? user.email} 님
             </span>
