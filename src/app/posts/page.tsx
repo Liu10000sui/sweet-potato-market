@@ -42,6 +42,14 @@ export default async function PostsPage() {
               href={`/posts/${post.id}`}
               className="ggm-post-card"
             >
+              <div className="ggm-post-card-thumb">
+                {post.image_url ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={post.image_url} alt={post.title} />
+                ) : (
+                  <span className="ggm-post-card-thumb-placeholder">🍠</span>
+                )}
+              </div>
               <div className="ggm-post-card-top">
                 <span className={`ggm-badge ggm-badge-${post.status}`}>
                   {STATUS_LABELS[post.status]}

@@ -55,6 +55,9 @@ export default async function NewPostPage({
             placeholder="상태, 거래 방법 등을 자세히 적어주세요."
           />
 
+          <label htmlFor="image">사진 (선택, 최대 5MB)</label>
+          <input id="image" name="image" type="file" accept="image/*" />
+
           <button type="submit" className="ggm-btn ggm-btn-primary ggm-btn-block">
             등록하기
           </button>

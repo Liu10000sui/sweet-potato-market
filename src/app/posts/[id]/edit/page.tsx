@@ -84,6 +84,19 @@ export default async function EditPostPage({
             defaultValue={post.description}
           />
 
+          <label htmlFor="image">
+            사진 (선택, 최대 5MB{post.image_url ? " · 새로 올리면 기존 사진이 바뀌어요" : ""})
+          </label>
+          {post.image_url && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={post.image_url}
+              alt="현재 등록된 사진"
+              className="ggm-edit-current-image"
+            />
+          )}
+          <input id="image" name="image" type="file" accept="image/*" />
+
           <button type="submit" className="ggm-btn ggm-btn-primary ggm-btn-block">
             수정 완료
           </button>

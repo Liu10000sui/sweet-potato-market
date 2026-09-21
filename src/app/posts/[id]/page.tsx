@@ -45,6 +45,15 @@ export default async function PostDetailPage({
           <span>{new Date(post.created_at).toLocaleString("ko-KR")}</span>
         </div>
 
+        {post.image_url && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={post.image_url}
+            alt={post.title}
+            className="ggm-post-detail-image"
+          />
+        )}
+
         <p className="ggm-post-detail-desc">{post.description}</p>
 
         <div className="ggm-post-detail-actions">

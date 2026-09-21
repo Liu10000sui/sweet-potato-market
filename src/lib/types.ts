@@ -15,6 +15,7 @@ export type GgmPost = {
   description: string;
   price: number;
   status: GgmPostStatus;
+  image_url: string | null;
   created_at: string;
   updated_at: string;
 };
