@@ -381,6 +381,44 @@ body {
   min-height: calc(100vh - 70px);
 }
 
+.ggm-mypage-main {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 1.5rem;
+}
+
+.ggm-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ggm-info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--ggm-border);
+}
+
+.ggm-info-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ggm-info-row dt {
+  color: var(--ggm-ink-dim);
+}
+
+.ggm-info-row dd {
+  color: var(--ggm-ink);
+  font-weight: bold;
+}
+
 .ggm-card {
   position: relative;
   z-index: 1;
@@ -415,6 +453,16 @@ body {
   background: rgba(255, 111, 207, 0.12);
   border: 2px solid var(--ggm-pink);
   color: var(--ggm-pink);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.ggm-success {
+  background: rgba(88, 224, 110, 0.12);
+  border: 2px solid var(--ggm-green);
+  color: var(--ggm-green);
   border-radius: 6px;
   padding: 0.6rem 0.8rem;
   font-size: 1rem;

@@ -36,6 +36,9 @@ export default async function Header() {
             <span className="ggm-nickname">
               {nickname ?? user.email} 님
             </span>
+            <Link href="/mypage" className="ggm-btn ggm-btn-ghost">
+              마이페이지
+            </Link>
             <form action={logout}>
               <button type="submit" className="ggm-btn ggm-btn-ghost">
                 로그아웃
